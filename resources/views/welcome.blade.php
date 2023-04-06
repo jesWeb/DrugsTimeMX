@@ -19,7 +19,7 @@
 
 <header>
     {{-- menu --}}
-    <div class="container-fluid bg-dark fixed-top  ">
+    <div class="container-fluid  fixed-top  bg-primary ">
         {{-- navb --}}
         <nav class="navbar navbar-expand-lg shadow-md navbar-dark  justify-content-around">
             {{-- content - nav --}}
@@ -57,7 +57,6 @@
     </div>
 </header>
 {{-- body --}}
-
 <body class="mt-3">
     <div class="container">
         <!--PROMO-slider-->
@@ -92,7 +91,7 @@
                         alt="...">
                     <!-- descripcion-slider -->
                     <div class="carousel-caption d-none d-md-block text-center  h3">
-                        <h3>DrugTime</h3>
+                        <h3 >DrugTime</h3>
                         <p>Nuestra empresa esta comprometida con el medio ambiente.</p>
                     </div>
                 </div>
@@ -171,21 +170,21 @@
     </div>
 </body>
 {{-- footer --}}
-<footer class="bg-dark container-fluid mt-5 vh-75">
+<footer class=" container-fluid mt-5 vh-75">
     <div class="row justify-content-center">
         {{-- img --}}
         <div class="col-auto align-self-center mr-4 m-5">
             <div class="row">
 
-                <!-- description -->
-                <div class="col-auto mr-2">
-                    <div class="row">
-                        <!-- content -->
-                        <div class="mt-5 mb-2 text-center  text-light col-12">
-                            <p>Derechos reservados © 2023 | DrugTime.MX</p>
-                        </div>
-                    </div>
+                 <!-- description -->
+        <div class="col-auto mr-2">
+            <div class="row">
+                <!-- content -->
+                <div class="mt-5 mb-2 text-center  text-light col-12">
+                    <p>Derechos reservados © 2023 | DrugTime.MX</p>
                 </div>
+            </div>
+        </div>
             </div>
 
         </div>

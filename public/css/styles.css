@@ -6,6 +6,32 @@
     margin: 0;
 }
 
+.navColor{
+    background: linear-gradient(159.37deg, #184BBB 30%, rgb(0, 206, 199) 95%);
+    height: 10vh;
+}
+
+footer{
+background:#184BBB  ;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .registro{
     height: 40vmax;
     width: 50vmin;
