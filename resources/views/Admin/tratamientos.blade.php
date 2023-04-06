@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-Mx">
 
 <head>
     <meta charset="utf-8">
@@ -23,7 +23,6 @@
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
-</head>
 </head>
 <header>
     <!-- Page Wrapper -->
@@ -181,6 +180,35 @@
 
 <body>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 </body>
 
 <footer class="sticky-footer bg-white">

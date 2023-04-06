@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 
 <head>
     <meta charset="utf-8">
@@ -15,8 +15,6 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
-    <!-- graficas -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
@@ -24,11 +22,9 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 </head>
-</head>
 <header>
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -84,18 +80,12 @@
             </div>
         </ul>
         <!-- End of Sidebar -->
-
-
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
@@ -181,8 +171,66 @@
 
 <body>
 
-</body>
+    <div class="container-fluid">
+        <!-- Page titulo-->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Agrega un medicamento</h1>
+        </div>
+        {{-- area de formulario  --}}
+        <div class="container">
+            <div class="d-flex justify-content-center aling-content-center">
+                {{-- carta de form --}}
+                <div class="shadow card-body mt-4">
+                    {{-- titulo --}}
+                    <div class="">
+                        <h4 class="text-center m-3">Registra tu Medicamento</h4>
+                        <div class="">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    {{-- formulario --}}
+                    <form action="{{route('medicamento.store')}}" ectype="multipart/form-data" method="POST">
+                        {{csrf_field()}}
+                        <!--Nombre -->
+                        <div class="mb-4">
+                            <label for="text" class="form-label">Nombre </label>
+                            <input type="text" class="form-control" name="nombre" placeholder="Ejemplo: paracetamol"
+                                require id="">
+                        </div>
+                        <!--Descripcion -->
+                        <div class="form-group">
+                            <label for="">¿Para que usaras este medicamento?</label>
 
+                            <input type="text" class="form-control" name="descripcion" id="descripcion">
+                        </div>
+                        <!--Tipo -->
+                        <div class="mb-4">
+                            <label for="text" class="form-label">Administracion </label>
+                            <input type="text" class="form-control" name="tipo" placeholder="Ejemplo: oral" require
+                                id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">¿Pertenece a algun tratamiento
+                                {{-- <select class="form-control form-select"
+                                    aria-label="escoge el tratamiento al que pertenece" name="tratamientos_id">
+                                    <option selected>------</option>
+                                    @foreach($recomendacion as $recomend)
+                                    <option value="{{$recomend->idTratamiento}}">{{$recomend->nombre}}</option>
+                                @endforeach
+                                </select> --}}
+                            </label>
+                        </div>
+                        <!-- btn -->
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{{-- footer --}}
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
@@ -222,7 +270,9 @@
             </div>
         </div>
     </div>
-</div <!-- Bootstrap core JavaScript-->
+</div>
+
+<!-- Bootstrap core JavaScript-->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 

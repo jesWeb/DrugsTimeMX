@@ -36,7 +36,7 @@
                 <ul class="navbar-nav m-2">
                     {{-- home --}}
                     <li class="nav-item border-bottom">
-                        <a class="nav-link active" aria-current="page" href="#">inicio</a>
+                        <a class="nav-link active" aria-current="page" href="">inicio</a>
                     </li>
                     {{-- slide --}}
                     <li class="nav-item">
@@ -57,6 +57,7 @@
     </div>
 </header>
 {{-- body --}}
+
 <body class="mt-3">
     <div class="container">
         <!--PROMO-slider-->
@@ -65,12 +66,12 @@
                 <!-- slider-content -->
                 <div class="carousel-item active">
                     <!-- img-slider -->
-                    <img src="{{asset('img/visuales/slider2.jpg')}}" class="d-block " style="height: 70vh; Width:100%;"
+                    <img src="{{asset('img/visuales/corazon.jpg')}}" class="d-block " style="height: 70vh; Width:100%;"
                         alt="introduccion">
                     <!-- descripcion-slider -->
-                    <div class="carousel-caption d-none d-md-block text-start text- h3">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                    <div class="carousel-caption d-none d-md-block text-center text-dark h3">
+                        <h3>Salud</h3>
+                        <p>En Drugtime tu salud es nuestra prioridad asi como tu vida</p>
                     </div>
                 </div>
                 <!-- slider-content -->
@@ -79,19 +80,19 @@
                     <img src="{{asset('img/visuales/slider3.jpg')}}" class="d-block  " style="height: 70vh; Width:100%;"
                         alt="...">
                     <!-- descripcion-slider -->
-                    <div class="carousel-caption d-none d-md-block text-start h3">
-                        <h5>First slide label</h5>
+                    <div class="carousel-caption d-none d-md-block text-center h3">
+                        <h3>First slide label</h3>
                         <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
                 <!-- slider-content -->
                 <div class="carousel-item">
                     <!-- img-slider -->
-                    <img src="{{asset('img/visuales/slider5.jpg')}}" class="d-block  " style="height: 70vh; Width:100%;"
+                    <img src="{{asset('img/visuales/chequeo.jpg')}}" class="d-block  " style="height: 70vh; Width:100%;"
                         alt="...">
                     <!-- descripcion-slider -->
-                    <div class="carousel-caption d-none d-md-block text-start h3">
-                        <h5>DrugTime</h5>
+                    <div class="carousel-caption d-none d-md-block text-center  h3">
+                        <h3>DrugTime</h3>
                         <p>Nuestra empresa esta comprometida con el medio ambiente.</p>
                     </div>
                 </div>
@@ -176,15 +177,15 @@
         <div class="col-auto align-self-center mr-4 m-5">
             <div class="row">
 
-                 <!-- description -->
-        <div class="col-auto mr-2">
-            <div class="row">
-                <!-- content -->
-                <div class="mt-5 mb-2 text-center  text-light col-12">
-                    <p>Derechos reservados © 2023 | DrugTime.MX</p>
+                <!-- description -->
+                <div class="col-auto mr-2">
+                    <div class="row">
+                        <!-- content -->
+                        <div class="mt-5 mb-2 text-center  text-light col-12">
+                            <p>Derechos reservados © 2023 | DrugTime.MX</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
             </div>
 
         </div>

@@ -15,23 +15,18 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
-    <!-- graficas -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 </head>
-</head>
+
 <header>
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -84,23 +79,16 @@
             </div>
         </ul>
         <!-- End of Sidebar -->
-
-
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
                     <!-- Topbar Search -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
@@ -114,10 +102,8 @@
                             </div>
                         </div>
                     </form>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
@@ -175,12 +161,105 @@
                         </li>
 
                     </ul>
-
                 </nav>
 </header>
 
 <body>
 
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center aling-content-center">
+            <div class="shadow card-body mt-4">
+                <div class="">
+                    <h4 class="text-center m-3">Registra a tu Tratamiento</h4>
+                    <div class="">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <form action="{{route('tratamiento.store')}}" ectype="multipart/form-data" method="post">
+                    {{csrf_field()}}
+                    <!--Nombre -->
+                    <div class="mb-4">
+                        <label for="text" class="form-label">Nombre </label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Ejemplo:@nombre" require
+                            id="">
+                    </div>
+                    <!--Nombre -->
+                    <div class="mb-4">
+                        <label for="text" class="form-label"> Cantidad de medicameto</label>
+                        <input type="text" class="form-control" name="dosis" id="" placeholder="1 pastilla">
+                    </div>
+                    <!-- horario -->
+                    <div class="mb-4" <label for="time" class="form-label">Horario</label>
+                        <input type="time" name="horario" class="form-control" id="t">
+                    </div>
+                    {{-- cliente --}}
+                    {{-- <div class="mb-4">
+                        <label for="">Aquien corresponde
+                            <select class="form-control form-select" aria-label="escoge el tratamiento al que pertenece"
+                                name="idCliente">
+                                <option selected>-----</option>
+                                @foreach($clientes as $cliente)
+                                <option value="{{$cliente->idCliente}}">{{$cliente->nombre}}</option>
+                                @endforeach
+                            </select>
+                        </label>
+                    </div> --}}
+                    <!-- dias -->
+                    <div class="mt-5  text-center">
+                        <!-- dias -->
+                        <div class="form-check form-check-inline">
+                            {{-- check lunes --}}
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="dias"
+                                value="lunes">
+                            <label class="form-check-label" for="inlineCheckbox1">Lunes</label>
+                            {{-- check martes --}}
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
+                                value="martes">
+                            <label class="form-check-label" for="inlineCheckbox2">Martes</label>
+                            {{-- miercoles --}}
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="dias"
+                                value="miercoles">
+                            <label class="form-check-label" for="inlineCheckbox3">Miercoles</label>
+                            {{-- jueves --}}
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="dias"
+                                value="jueves">
+                            <label class="form-check-label" for="inlineCheckbox4">Jueves</label>
+                            {{-- viernes --}}
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="dias"
+                                value="viernes">
+                            <label class="form-check-label" for="inlineCheckbox5">Viernes</label>
+                            {{-- sabado --}}
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" name="dias"
+                                value="sabado">
+                            <label class="form-check-label" for="inlineCheckbox6">Sabados</label>
+                            {{-- domingo --}}
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox7" name="dias"
+                                value="domingo">
+                            <label class="form-check-label" for="inlineCheckbox7">Domingo</label>
+                        </div>
+
+                    </div>
+                    <!-- btn -->
+                    <div class="text-center mt-5">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
 </body>
 
 <footer class="sticky-footer bg-white">
@@ -191,10 +270,8 @@
     </div>
 </footer>
 <!-- End of Footer -->
-
 </div>
 <!-- End of Content Wrapper -->
-
 </div>
 <!-- End of Page Wrapper -->
 

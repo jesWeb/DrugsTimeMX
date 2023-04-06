@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 
 <head>
     <meta charset="utf-8">
@@ -15,16 +15,13 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
-    <!-- graficas -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 </head>
-</head>
+
 <header>
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -84,9 +81,6 @@
             </div>
         </ul>
         <!-- End of Sidebar -->
-
-
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -177,6 +171,8 @@
                     </ul>
 
                 </nav>
+
+            </div>
 </header>
 
 <body>
@@ -222,7 +218,9 @@
             </div>
         </div>
     </div>
-</div <!-- Bootstrap core JavaScript-->
+</div >
+
+<!-- Bootstrap core JavaScript-->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-Mx">
 
 <head>
     <meta charset="utf-8">
@@ -180,6 +180,29 @@
 </header>
 
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 

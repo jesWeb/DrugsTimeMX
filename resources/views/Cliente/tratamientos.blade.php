@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es-Mx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,23 +14,17 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
-    <!-- graficas -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 </head>
-</head>
 <header>
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -39,10 +32,8 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">DrugTime.MX<sup>®</sup></div>
             </a>
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="/cliente">
@@ -84,23 +75,16 @@
             </div>
         </ul>
         <!-- End of Sidebar -->
-
-
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
                     <!-- Topbar Search -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
@@ -114,7 +98,6 @@
                             </div>
                         </div>
                     </form>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -178,9 +161,75 @@
 
                 </nav>
 </header>
-
+{{--  --}}
 <body>
+    <div class="container-fluid">
+        <!-- DataTales Example -->
+        <div class="card shadow mb-3">
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    {{-- titulo --}}
+                    <h3 class="m-1 font-weight-bold text-primary">Tus Tratamientos</h3>
+                    {{-- btn de tratamiento --}}
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-primary " href="{{route('tratamiento.create')}}">Agregar Tratamiento<i
+                                class=" m-2 fa-solid fa-plus" style="color: #fcfcfc;"></i></a>
+                    </div>
+                </div>
+                {{-- tabla de contenido --}}
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Nombre</th>
+                                    <th>Cantidad de medicamento</th>
+                                    <th>Horario</th>
+                                    <th>Dias</th>
+                                    <th>Eliminar</th>
+                                    <!-- <th>Operaciones</th> -->
+                                </tr>
+                            <tbody>
+                                {{-- consulta eloquente en vista  --}}
+                                {{-- @foreach($recomendacion as $recomend)
+                                <tr>
+                                    <td>{{$recomend->id}}</td>
+                                <td>{{$recomend->nombre}}</td>
+                                <td>{{$recomend->dosis}}</td>
+                                <td>{{$recomend->horario}}</td>
+                                <td>
+                                    <p>{{$recomend->dias}}</p>
+                                    <p>{{$recomend->dias}}</p>
+                                    <p>{{$recomend->dias}}</p>
+                                </td>
 
+                                <td>
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                            <form action="tratamiento/{{$recomend->id}}" method="post">
+                                                {!! csrf_field() !!}
+                                                @method("delete")
+
+                                                <button class="btn btn-danger m-3" type="submit"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                @endforeach --}}
+                            </tbody>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </body>
 
 <footer class="sticky-footer bg-white">
@@ -191,18 +240,14 @@
     </div>
 </footer>
 <!-- End of Footer -->
-
 </div>
 <!-- End of Content Wrapper -->
-
 </div>
 <!-- End of Page Wrapper -->
-
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -222,7 +267,8 @@
             </div>
         </div>
     </div>
-</div <!-- Bootstrap core JavaScript-->
+</div>
+<!-- Bootstrap core JavaScript-->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
@@ -238,9 +284,6 @@
 <!-- Page level custom scripts -->
 <script src="{{asset('js/demo/chart-area-demo.js')}}"></script>
 <script src="{{asset('js/demo/chart-pie-demo.js')}}"></script>
-
-
-
 
 
 </html>

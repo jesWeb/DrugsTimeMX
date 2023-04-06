@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-Mx">
 
 <head>
     <meta charset="utf-8">
@@ -24,7 +24,7 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 </head>
-</head>
+
 <header>
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -180,6 +180,69 @@
 </header>
 
 <body>
+    <div class="container">
+
+        {{-- grafica uno   --}}
+        <div class="">
+            <canvas id="myChart"></canvas>
+
+        <script>
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19, 3, 5, 2, 3],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+
+        </div>
+        {{-- grafica dos  --}}
+
+        <div class="">
+
+
+
+        </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 

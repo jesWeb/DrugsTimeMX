@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 
 <head>
     <meta charset="utf-8">
@@ -15,23 +15,16 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
-    <!-- graficas -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
-
-</head>
 </head>
 <header>
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         <ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -84,15 +77,10 @@
             </div>
         </ul>
         <!-- End of Sidebar -->
-
-
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -180,7 +168,61 @@
 </header>
 
 <body>
-
+    <div class="container-fluid">
+        <!-- DataTales Example -->
+        <div class="card shadow mb-3">
+            {{-- titulo de tabla --}}
+            <div class="card-header py-3">
+                <h3 class="m-1 font-weight-bold text-primary">Tus Medicamentos</h3>
+                {{-- btn link --}}
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-primary " href="{{route('medicamento.create')}}">Agregar Medicamento<i
+                            class=" m-2 fa-solid fa-plus" style="color: #fcfcfc;"></i></a>
+                </div>
+            </div>
+            {{-- tabala de contenido --}}
+            <div class="card-body">
+                <div class="table-responsive">
+                    {{-- tabla --}}
+                    <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Nombre</th>
+                                <th>Administracion</th>
+                                <th>Descripcion</th>
+                                <th>Tratamiento</th>
+                                <!-- <th>Operaciones</th> -->
+                            </tr>
+                        <tbody>
+                            {{-- consulta eloquente en vista  --}}
+                            {{-- @foreach($medicamentos as $medicamento)
+                            <tr>
+                                <td>{{$medicamento->id}}</td>
+                            <td>{{$medicamento->nombre}}</td>
+                            <td>{{$medicamento->tipo}}</td>
+                            <td>{{$medicamento->descripcion}}</td>
+                            <td>
+                                <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                        <form action="medicamento/{{$medicamento->id}}" method="post">
+                                            {!! csrf_field() !!}
+                                            @method("delete")
+                                            <button class="btn btn-danger " type="submit"><i
+                                                    class="fa-solid fa-trash"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </td>
+                            </tr>
+                            @endforeach --}}
+                        </tbody>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <footer class="sticky-footer bg-white">
@@ -191,10 +233,8 @@
     </div>
 </footer>
 <!-- End of Footer -->
-
 </div>
 <!-- End of Content Wrapper -->
-
 </div>
 <!-- End of Page Wrapper -->
 
@@ -222,19 +262,16 @@
             </div>
         </div>
     </div>
-</div <!-- Bootstrap core JavaScript-->
+</div>
+<!-- Bootstrap core JavaScript-->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
 <!-- Core plugin JavaScript-->
 <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-
 <!-- Custom scripts for all pages-->
 <script src="{{asset('js/sb-admin-2.min.js')}}"></script>
-
 <!-- Page level plugins -->
 <script src="{{asset('vendor/chart.js/Chart.min.js')}}"></script>
-
 <!-- Page level custom scripts -->
 <script src="{{asset('js/demo/chart-area-demo.js')}}"></script>
 <script src="{{asset('js/demo/chart-pie-demo.js')}}"></script>
