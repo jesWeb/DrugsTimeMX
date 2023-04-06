@@ -12,6 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         //
+         //
+         Schema::create('tipoUsuarios',function (Blueprint $table){
+            $table->id('idTUsuario');
+            $table->string('Puesto');
+            $table->integer('Tipo');
+            $table->timestamps();
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -20,5 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('tipoUsuarios');
     }
 };

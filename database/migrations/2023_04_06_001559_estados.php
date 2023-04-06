@@ -12,6 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         //
+        Schema::create('estados', function (Blueprint $table) {
+            $table->id('idEstados');
+            $table->char('clave');
+            $table->string('nombre')->nullable();
+            $table->char('abrev');
+            $table->integer('activo');
+        });
     }
 
     /**
@@ -20,5 +27,7 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('estados');
+    
     }
 };

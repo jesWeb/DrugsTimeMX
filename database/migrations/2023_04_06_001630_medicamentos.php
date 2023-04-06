@@ -12,6 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         //
+        Schema::create('medicamentos',function (Blueprint $table){
+            $table->id();
+            $table->text('nombre');
+            $table->string('descripcion');
+            $table->text('tipo');
+            //$table->Integer('imagenM');
+            $table->timestamps();
+            //llaves foraneas
+            $table->unsignedBigInteger('tratamientos_id');
+            $table->foreign('tratamientos_id')->references('idTratamiento')->on('tratamientos');
+              //llave foranea
+            $table->unsignedBigInteger('idCliente');
+            $table->foreign('idCliente')->references('idCliente')->on('clientes');
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -20,5 +35,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('medicamentos');
     }
 };

@@ -12,6 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         //
+        Schema::create('maquinas', function (Blueprint $table)  {
+            $table->id();
+            $table->string('nombre');
+            $table->string('Modelo');
+            $table->string('Humedad');
+            $table->timestamps();
+             //llave foranea
+             $table->unsignedBigInteger('idCliente');
+             $table->foreign('idCliente')->references('idCliente')->on('clientes');
+
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -20,5 +32,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('maquinas');
     }
 };

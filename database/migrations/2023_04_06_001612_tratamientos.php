@@ -12,6 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         //
+        Schema::create('tratamientos',function (Blueprint $table){
+            $table->id('idTratamiento');
+            $table->string('nombre');
+            $table->integer('dosis');
+            $table->time('horario');
+            $table->string('dias');
+            $table->timestamps();
+            $table->softDeletes();
+            //llave foranea
+            $table->unsignedBigInteger('idCliente');
+            $table->foreign('idCliente')->references('idCliente')->on('clientes');
+        });
     }
 
     /**
@@ -20,5 +32,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('tratamientos');
     }
 };
