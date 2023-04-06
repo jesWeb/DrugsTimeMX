@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.registro{
+    height: 40vmax;
+    width: 50vmin;
+}
+
+.img-registro{
+    height: 40vmax;
+    width: 50vmin;
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+    .img-registro {
+      display: none;
+    }
+
+   .registro{
+    height: 60vmax;
+   }
+ }
