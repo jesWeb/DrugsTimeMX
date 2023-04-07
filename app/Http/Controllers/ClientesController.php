@@ -103,7 +103,6 @@ class ClientesController extends Controller
                 $html .= "<option value='".$municipio->id."'>".$municipio->nombre."</option>";
             }
             return $html;
-
      }
 
 
