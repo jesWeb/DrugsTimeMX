@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use Illuminate\Http\Request;
+use App\Models\estados;
+use App\Models\municipios;
 
 class ClientesController extends Controller
 {
@@ -19,9 +21,9 @@ class ClientesController extends Controller
 
      public function info()
      {
-
+        $estados = estados::all();
          //vista
-         return view('cliente.info');
+         return view('cliente.info', compact('estados'));
      }
 
 
@@ -94,8 +96,13 @@ class ClientesController extends Controller
 
      public function municipios(Request $request){
 
-            $muniPet = $request->id_muni;
-            $Muni = $muniPet[0]->municipios:
+            $muniPet = $request->idEstado;
+            $municipios = municipios::where('estado_id', $muniPet)->get();
+            $html =  "<option value='0'>Seleccionar un municipio</option>";
+            foreach ($municipios as $municipio) {
+                $html .= "<option value='".$municipio->id."'>".$municipio->nombre."</option>";
+            }
+            return $html;
 
      }
 

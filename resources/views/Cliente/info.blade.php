@@ -19,17 +19,17 @@
 
             @enderror
             {{--  --}}
-            <script language="javascript" src="https://code.jquery.com/jquery-3.1.1.min.js%22%3E</script>
+            <script language="javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
                 <script language="javascript">
-                    // var URL = 'https://intertransport.test/peticiones/boletos_precio';
+                    var URL = '{{ route('getMunicipio')}}';
                     $(document).ready(function() {
-                        $("#ruta").change(function() {
+                        $("#estado").change(function() {
                             // $("#ruta").find()
-                            $("#ruta option:selected").each(function() {
-                                id_ruta = $(this).val();
+                            $("#estado option:selected").each(function() {
+                                idEstado = $(this).val();
                                 // token = @csrf;
                                 $.get(URL, {
-                                    id_ruta: id_ruta
+                                    idEstado: idEstado
                                     // token: token
                                 }, function(data) {
                                     $("#municipios").html(data);
@@ -140,8 +140,11 @@
                     <label for="">Selecciona tu Estado</label>
 
                     <div class="form-group">
-                        <select class="form-control" name="sexo" require id="">
-                            <option value=""></option>
+                        <select class="form-control" name="estado" require id="estado">
+                            <option value="0" selected>SELECCIONA UN ESTADO</option>
+                            @foreach ($estados as $estado)
+                            <option value="{{ $estado->idEstados }}">{{ $estado->nombre }}</option>
+                            @endforeach
                         </select>
                     </div>
                     @error('estados')
@@ -156,9 +159,9 @@
                 {{-- munipcipios --}}
                 <div class="col-md-6 mt-4">
                     <label for="exampleInputPassword1" class="form-label">Municipio</label>
-                    <div id="municipios">
+                    <select name="municipio" id="municipios" class="form-control" aria-label="Default select example">
 
-                    </div>
+                    </select>
                 </div>
 
 
