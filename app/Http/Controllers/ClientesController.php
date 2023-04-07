@@ -92,4 +92,19 @@ class ClientesController extends Controller
      }
 
 
+<<<<<<< HEAD
+=======
+     public function municipios(Request $request){
+
+            $muniPet = $request->idEstado;
+            $municipios = municipios::where('estado_id', $muniPet)->get();
+            $html =  "<option value='0'>Seleccionar un municipio</option>";
+            foreach ($municipios as $municipio) {
+                $html .= "<option value='".$municipio->id."'>".$municipio->nombre."</option>";
+            }
+            return $html;
+     }
+
+
+>>>>>>> 21695d46332cb2da3dd5e3ee1cd50ba26f2b5b16
 }
