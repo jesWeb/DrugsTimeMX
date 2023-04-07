@@ -140,16 +140,15 @@
                     <label for="">Selecciona tu Estado</label>
 
                     <div class="form-group">
-<<<<<<< HEAD
                         <select class="form-control" name="estado" require id="">
                             <option value=""></option>
-=======
+
                         <select class="form-control" name="estado" require id="estado">
                             <option value="0" selected>SELECCIONA UN ESTADO</option>
                             @foreach ($estados as $estado)
                             <option value="{{ $estado->idEstados }}">{{ $estado->nombre }}</option>
                             @endforeach
->>>>>>> 30496d9fe97c2723663045678c970534d161c2c2
+
                         </select>
                     </div>
                     @error('estados')
