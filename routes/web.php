@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\medicamentosController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,9 +52,9 @@ Route::prefix('cliente')->group(function () {
     Route::get('/user/get/municipios', [ClientesController::class, 'municipios'])->name('getMunicipio');
 });
 
+Route::prefix('medicamentos')->group(function () {
+    Route::post('user/create/medicamento', [medicamentosController::class, 'createMedicamento'])->name('createMedicamento');
 
-
-
-
-
-
+    Route::get('user/view/medicamentos', [medicamentosController::class, 'viewMedicamento'])->name('viewMedicamento');
+    Route::post('user/delete/medicamento', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
+});
