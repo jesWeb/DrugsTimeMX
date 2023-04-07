@@ -11,6 +11,8 @@ class Cuidador extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $table = 'cuidadores';
+
     protected $fillable =[
         'nombre',
         'fechaN',

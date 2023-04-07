@@ -32,6 +32,7 @@ if(isset($_SESSION['login'])){
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
@@ -65,7 +66,7 @@ if(isset($_SESSION['login'])){
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active3">
-                <a class="nav-link" href="/cuidador">
+                <a class="nav-link" href="{{route('cuidador')}}">
                     <i class="fa-solid fa-user-doctor"></i>
                     <span>Cuidadores</span></a>
             </li>
@@ -188,9 +189,7 @@ if(isset($_SESSION['login'])){
                     </ul>
 
                 </nav>
-
-            </div>
-            @yield('content')
+                @yield('content')
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -198,6 +197,7 @@ if(isset($_SESSION['login'])){
                     </div>
                 </div>
             </footer>
+            </div>
 </header>
 
 <body>

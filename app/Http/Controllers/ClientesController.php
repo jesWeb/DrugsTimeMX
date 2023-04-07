@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use Illuminate\Http\Request;
+use App\Models\estados;
+use App\Models\municipios;
 
 class ClientesController extends Controller
 {
@@ -21,7 +23,9 @@ class ClientesController extends Controller
      {
 
          //vista
-         return view('cliente.info');
+         $estados = estados::all();
+         //vista
+         return view('cliente.info', compact('estados'));
      }
 
 
@@ -92,8 +96,6 @@ class ClientesController extends Controller
      }
 
 
-<<<<<<< HEAD
-=======
      public function municipios(Request $request){
 
             $muniPet = $request->idEstado;
@@ -106,5 +108,4 @@ class ClientesController extends Controller
      }
 
 
->>>>>>> 21695d46332cb2da3dd5e3ee1cd50ba26f2b5b16
 }
