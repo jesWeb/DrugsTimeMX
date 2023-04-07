@@ -49,7 +49,11 @@ Route::prefix('cliente')->group(function () {
     Route::post('/user/resgister', [AuthController::class, 'registerCreate'])->name('registerCreate');
     Route::post('/user/saveSettingsC', [ClientesController::class, 'saveSettingsC'])->name('saveSettingsC');
     Route::post('/user/perfilC', [ClientesController::class, 'perfilC'])->name('perfilC');
+<<<<<<< HEAD
     Route::get('/user/get/municipios', [ClientesController::class, 'municipios'])->name('getMunicipio');
+=======
+
+>>>>>>> parent of 30496d9 (Se agrego la peticion  y extraccion de municipios desde la base de datos con Jquery y js)
 });
 
 Route::prefix('medicamentos')->group(function () {
