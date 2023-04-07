@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use Illuminate\Http\Request;
+use App\Models\estados;
+use App\Models\municipios;
 
 class ClientesController extends Controller
 {

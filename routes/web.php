@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\medicamentosController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,16 +49,13 @@ Route::prefix('cliente')->group(function () {
     Route::post('/user/resgister', [AuthController::class, 'registerCreate'])->name('registerCreate');
     Route::post('/user/saveSettingsC', [ClientesController::class, 'saveSettingsC'])->name('saveSettingsC');
     Route::post('/user/perfilC', [ClientesController::class, 'perfilC'])->name('perfilC');
-<<<<<<< HEAD
     Route::get('/user/get/municipios', [ClientesController::class, 'municipios'])->name('getMunicipio');
-=======
 
->>>>>>> parent of 30496d9 (Se agrego la peticion  y extraccion de municipios desde la base de datos con Jquery y js)
 });
 
+Route::prefix('medicamentos')->group(function () {
+    Route::post('user/create/medicamento', [medicamentosController::class, 'createMedicamento'])->name('createMedicamento');
 
-
-
-
-
-
+    Route::get('user/view/medicamentos', [medicamentosController::class, 'viewMedicamento'])->name('viewMedicamento');
+    Route::post('user/delete/medicamento', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
+});
