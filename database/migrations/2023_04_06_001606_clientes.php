@@ -27,7 +27,7 @@ return new class extends Migration
              //llave foranea
             //type user
             $table->unsignedBigInteger('idTUsuario')->nullable();
-            $table->foreign('idTUsuario')->references('idTUsuario')->on('tiposUsuarios');
+            $table->foreign('idTUsuario')->references('idTUsuario')->on('tipoUsuarios');
 
             $table->unsignedBigInteger('idEstado')->nullable();
             $table->foreign('idEstado')->references('idEstados')->on('estados');

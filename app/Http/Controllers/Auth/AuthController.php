@@ -18,7 +18,6 @@ class AuthController extends Controller
      //registro nuevo
    public function create()
    {
-
         //vista
         return view('logeo.register');
 
