@@ -18,6 +18,31 @@
             </script>
 
             @enderror
+            {{--  --}}
+            <script language="javascript" src="https://code.jquery.com/jquery-3.1.1.min.js%22%3E</script>
+                <script language="javascript">
+                    // var URL = 'https://intertransport.test/peticiones/boletos_precio';
+                    $(document).ready(function() {
+                        $("#ruta").change(function() {
+                            // $("#ruta").find()
+                            $("#ruta option:selected").each(function() {
+                                id_ruta = $(this).val();
+                                // token = @csrf;
+                                $.get(URL, {
+                                    id_ruta: id_ruta
+                                    // token: token
+                                }, function(data) {
+                                    $("#municipios").html(data);
+                                });
+                                // console.log(token);
+                            });
+                        })
+                    });
+                </script>
+
+
+
+
             <form class="row g-3" style="
                                     display: flex;
                                     align-items: center;
@@ -112,24 +137,28 @@
 
                 {{-- estados --}}
                 <div class="col-md-6 mt-4">
-                    <label for="text">Estado</label>
-                    <input type="text" class="form-control" name="estados" id="descripcion">
+                    <label for="">Selecciona tu Estado</label>
+
+                    <div class="form-group">
+                        <select class="form-control" name="sexo" require id="">
+                            <option value=""></option>
+                        </select>
+                    </div>
                     @error('estados')
                     <div id="validationServer03Feedback" class="" style="color: red">
                         {{ $message }}
                     </div>
                     @enderror
+
+
                 </div>
 
                 {{-- munipcipios --}}
                 <div class="col-md-6 mt-4">
-                    <label for="">Municipio</label>
-                    <input type="text" class="form-control" name="municipio" id="descripcion">
-                    @error('municipio')
-                    <div id="validationServer03Feedback" class="" style="color: red">
-                        {{ $message }}
+                    <label for="exampleInputPassword1" class="form-label">Municipio</label>
+                    <div id="municipios">
+
                     </div>
-                    @enderror
                 </div>
 
 
@@ -150,4 +179,3 @@
     </form>
 </div>
 @stop
-

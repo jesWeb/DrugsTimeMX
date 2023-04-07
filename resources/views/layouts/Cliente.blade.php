@@ -1,7 +1,7 @@
 <?php
-
+//validacion de session
 session_start();
-
+//validacion de usuario si estas te dejo en info si no cual quier vista
 if(isset($_SESSION['login'])){
 
 }else {?>
