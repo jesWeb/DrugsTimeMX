@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['login'])){
+
+}else {?>
+
+<script>
+    window.location.href = "{{ route('loginAuth') }}";
+</script>;
+
+<?php
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es-MX">
 
