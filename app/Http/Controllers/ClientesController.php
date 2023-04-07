@@ -92,12 +92,5 @@ class ClientesController extends Controller
      }
 
 
-     public function municipios(Request $request){
-
-            $muniPet = $request->id_muni;
-            $Muni = $muniPet[0]->municipios:
-
-     }
-
 
 }

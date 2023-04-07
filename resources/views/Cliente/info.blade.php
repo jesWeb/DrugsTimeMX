@@ -140,7 +140,7 @@
                     <label for="">Selecciona tu Estado</label>
 
                     <div class="form-group">
-                        <select class="form-control" name="sexo" require id="">
+                        <select class="form-control" name="estado" require id="">
                             <option value=""></option>
                         </select>
                     </div>
