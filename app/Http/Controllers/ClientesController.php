@@ -95,11 +95,7 @@ class ClientesController extends Controller
      public function municipios(Request $request){
 
             $muniPet = $request->id_muni;
-<<<<<<< HEAD
-            $Muni = $muniPet[0]->municipios
-=======
-            $Muni = $muniPet[0]->municipios:
->>>>>>> parent of 50759b7 (cambios no one)
+            $Muni = $muniPet[0]->municipios;
 
      }
 
