@@ -19,17 +19,17 @@
 
             @enderror
             {{--  --}}
-            <script language="javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script language="javascript" src="https://code.jquery.com/jquery-3.1.1.min.js%22%3E</script>
                 <script language="javascript">
-                    var URL = '{{ route('getMunicipio')}}';
+                    // var URL = 'https://intertransport.test/peticiones/boletos_precio';
                     $(document).ready(function() {
-                        $("#estado").change(function() {
+                        $("#ruta").change(function() {
                             // $("#ruta").find()
-                            $("#estado option:selected").each(function() {
-                                idEstado = $(this).val();
+                            $("#ruta option:selected").each(function() {
+                                id_ruta = $(this).val();
                                 // token = @csrf;
                                 $.get(URL, {
-                                    idEstado: idEstado
+                                    id_ruta: id_ruta
                                     // token: token
                                 }, function(data) {
                                     $("#municipios").html(data);
@@ -140,6 +140,7 @@
                     <label for="">Selecciona tu Estado</label>
 
                     <div class="form-group">
+<<<<<<< HEAD
                         <select class="form-control" name="estado" require id="">
                             <option value=""></option>
 
@@ -149,6 +150,10 @@
                             <option value="{{ $estado->idEstados }}">{{ $estado->nombre }}</option>
                             @endforeach
 
+=======
+                        <select class="form-control" name="sexo" require id="">
+                            <option value=""></option>
+>>>>>>> parent of 30496d9 (Se agrego la peticion  y extraccion de municipios desde la base de datos con Jquery y js)
                         </select>
                     </div>
                     @error('estados')
@@ -163,9 +168,9 @@
                 {{-- munipcipios --}}
                 <div class="col-md-6 mt-4">
                     <label for="exampleInputPassword1" class="form-label">Municipio</label>
-                    <select name="municipio" id="municipios" class="form-control" aria-label="Default select example">
+                    <div id="municipios">
 
-                    </select>
+                    </div>
                 </div>
 
 
