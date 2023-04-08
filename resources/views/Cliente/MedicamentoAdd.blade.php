@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     {{-- formulario --}}
-                    <form action="{{route('medicamento.store')}}" ectype="multipart/form-data" method="POST">
+                    <form action="{{route('createMedicamento')}}" ectype="multipart/form-data" method="POST">
                         {{csrf_field()}}
                         <!--Nombre -->
                         <div class="mb-4">
@@ -42,13 +42,13 @@
                         </div>
                         <div class="form-group">
                             <label for="">¿Pertenece a algun tratamiento
-                                {{-- <select class="form-control form-select"
-                                    aria-label="escoge el tratamiento al que pertenece" name="tratamientos_id">
+                                <select class="form-control form-select"
+                                    aria-label="escoge el tratamiento al que pertenece" name="idTratamiento">
                                     <option selected>------</option>
                                     @foreach($recomendacion as $recomend)
                                     <option value="{{$recomend->idTratamiento}}">{{$recomend->nombre}}</option>
                                 @endforeach
-                                </select> --}}
+                                </select>
                             </label>
                         </div>
                         <!-- btn -->

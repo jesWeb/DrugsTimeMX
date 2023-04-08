@@ -11,7 +11,7 @@
                         <img src="" alt="">
                     </div>
                 </div>
-                <form action="{{route('tratamiento.store')}}" ectype="multipart/form-data" method="post">
+                <form action="{{route('TratamientoCreate')}}" ectype="multipart/form-data" method="post">
                     {{csrf_field()}}
                     <!--Nombre -->
                     <div class="mb-4">

@@ -60,7 +60,7 @@ if(isset($_SESSION['login'])){
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/cliente">
+                <a class="nav-link" href="">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span></a>
             </li>
@@ -72,20 +72,20 @@ if(isset($_SESSION['login'])){
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active1">
-                <a class="nav-link" href="/tratamiento">
+                <a class="nav-link" href="{{route('tratamiento')}}">
                     <i class="fa-solid fa-clock"></i>
                     <span>Tratamientos</span></a>
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active1">
-                <a class="nav-link" href="/medicamento">
+                <a class="nav-link" href="{{route('viewMedicamento')}}">
                     <i class="fa-solid fa-toolbox"></i>
                     <span>Medicamentos</span></a>
             </li>
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active2">
-                <a class="nav-link" href="/maquinas">
+                <a class="nav-link" href="{{route('maquinasW')}}">
                     <i class="fa-solid fa-dog"></i>
                     <span>Drugslide</span></a>
             </li>
@@ -167,15 +167,15 @@ if(isset($_SESSION['login'])){
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="">
+                                <a class="dropdown-item" href="{{route('perfilCliente')}}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Tu perfil
                                 </a>
 
-                                <a class="dropdown-item" href=""><i
+                                <a class="dropdown-item" href="{{route('ReporteCliente')}}"><i
                                         class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Reportes </a>
-                                <a class="dropdown-item" href=""><i
+                                <a class="dropdown-item" href="{{route('GraficaCliente')}}"><i
                                         class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Estadisticas </a>
                                 <div class="dropdown-divider"></div>
