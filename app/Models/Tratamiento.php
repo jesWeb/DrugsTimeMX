@@ -11,7 +11,6 @@ class Tratamiento extends Model
     use SoftDeletes;
 
     protected $primaryKey = 'idTratamiento';
-
     protected $fillable =[
         'nombre',
         'dosis',

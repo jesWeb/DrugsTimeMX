@@ -83,17 +83,15 @@ Route::prefix('tratamientos')->group(function () {
     Route::get('/view', [TratamientoController::class, 'index'])->name('tratamiento');
     Route::get('/create', [TratamientoController::class, 'TrataC'])->name('TratamientoAdd');
     Route::post('/create/tratamiento', [TratamientoController::class, 'TratamientoCreate'])->name('TratamientoCreate');
-    Route::get('/delate/tratamiento/{id}', [TratamientoController::class, 'Tratamientodelate'])->name('Tratamientodelate');
+    Route::get('/delate/tratamiento/{id}', [TratamientoController::class, 'Tratamientodelate'])->name('TratamientoDelate');
 });
 /////Medicamento////
 Route::prefix('medicamentos')->group(function () {
-    Route::post('user/create/medicamento', [medicamentosController::class, 'createMedicamento'])->name('createMedicamento');
-
     Route::get('user/view/medicamentos', [medicamentosController::class, 'viewMedicamento'])->name('viewMedicamento');
     Route::post('user/delete/medicamento', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
     Route::get('/view/medicamentos', [medicamentosController::class, 'viewMedicamento'])->name('viewMedicamento');
     Route::get('/create', [medicamentosController::class, 'MediAdd'])->name('MediAdd');
-    Route::post('/create/medicamento', [medicamentosController::class, ' createMedicamento   '])->name('createMedicamento');
+    Route::post('/create/medicamento', [medicamentosController::class, 'createMedicamento'])->name('createMedicamento');
     Route::delete('delete/medicamento/{id}', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
 });
 ////MAquina//

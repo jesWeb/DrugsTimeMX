@@ -14,7 +14,7 @@ class TratamientoController extends Controller
         //cosulta DB eloquent laravel
          $recomendacion = Tratamiento::all();
           //vista
-          return view('Cliente.tratamientos',compact('recomendacion'));
+          return view('Cliente.tratamientos', compact('recomendacion'));
 
       }
 

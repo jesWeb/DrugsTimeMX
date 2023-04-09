@@ -16,7 +16,9 @@ class Medicamento extends Model
         'nombre',
         'descripcion',
         'tipo',
-        'idTratamiento'
+        'tratamientos_id',
+        'idCliente',
+
         //'imagenM',
     ];
 }
