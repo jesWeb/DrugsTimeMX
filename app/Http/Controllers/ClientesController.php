@@ -23,7 +23,9 @@ class ClientesController extends Controller
      {
 
          //vista
-         return view('cliente.info');
+         $estados = estados::all();
+         //vista
+         return view('cliente.info', compact('estados'));
      }
 
 
