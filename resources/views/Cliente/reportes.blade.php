@@ -19,8 +19,12 @@
         </div>
         <div class="col-xl-6 text-center col-md-4 ">
             <p>Descarga tu Historial de medicamentos y Tratamientos  </p>
-            <a href="{{route('Reporte.export')}}"   class="btn btn-success m-2">Descarga Excell</a>
-            {{-- <button href="{{route('')}}"  class="btn btn-danger m-2">Descarga PDF</button> --}}
+            <div class="mt-2">
+                {{-- <h3 class="h4">Medicamentos</h3> --}}
+                <a href="{{route('Reporte.export')}}"   class="btn btn-success m-2">Descarga Excell</a>
+                <a href="{{route('reportePDF')}}"  class="btn btn-danger m-2">Descarga PDF</a>
+            </div>
+
         </div>
     </div>
 

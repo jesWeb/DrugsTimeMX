@@ -45,6 +45,7 @@ Route::prefix('cliente')->group(function () {
     Route::get('/perfil', [ClientesController::class, 'perfil'])->name('perfilCliente');
     Route::get('/reportes', [ReportesController::class, 'ReporteCliente'])->name('Reporte.export');
     Route::get('/Tureporte', [ReportesController::class, 'Tureporte'])->name('Tureporte');
+    Route::get('/reportePDF', [ReportesController::class, 'reportePDF'])->name('reportePDF');
     Route::get('/grafica', [ClientesController::class, 'grafica'])->name('GraficaCliente');
     Route::get('/user/login', [AuthController::class, 'index'])->name('loginAuth');
     Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
