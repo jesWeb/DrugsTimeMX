@@ -1,5 +1,6 @@
 <?php
 
+use App\Exports\MedicamentosExport;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\ClientesController;
@@ -7,7 +8,7 @@ use App\Http\Controllers\medicamentosController;
 use App\Http\Controllers\CuidadorController;
 use App\Http\Controllers\TratamientoController;
 use App\Http\Controllers\MaquinaController;
-use App\Models\Tratamiento;
+use App\Http\Controllers\ReportesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,8 @@ Route::prefix('auth')->group(function () {
 Route::prefix('cliente')->group(function () {
     Route::get('/info', [ClientesController::class, 'info'])->name('infoCliente');
     Route::get('/perfil', [ClientesController::class, 'perfil'])->name('perfilCliente');
-    Route::get('/reportes', [ClientesController::class, 'Reporte'])->name('ReporteCliente');
+    Route::get('/reportes', [ReportesController::class, 'ReporteCliente'])->name('Reporte.export');
+    Route::get('/Tureporte', [ReportesController::class, 'Tureporte'])->name('Tureporte');
     Route::get('/grafica', [ClientesController::class, 'grafica'])->name('GraficaCliente');
     Route::get('/user/login', [AuthController::class, 'index'])->name('loginAuth');
     Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
@@ -86,3 +88,4 @@ Route::prefix('maquina')->group(function () {
     Route::post('/create/maquinas', [MaquinaController::class, ' createMaqui  '])->name('createMaqui');
     Route::delete('/delete/maquina/{id}', [MaquinaController::class, 'delateMaquina'])->name('delateMaquina');
 });
+

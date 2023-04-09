@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Cliente;
 use Illuminate\Http\Request;
 use App\Models\estados;
@@ -114,14 +113,13 @@ class ClientesController extends Controller
         return view('Cliente.perfil');
     }
 
-    public function Reporte()
-    {
-        return view('Cliente.reportes');
-    }
 
 
     public function grafica()
     {
         return view('Cliente.graficas');
     }
+
+
+
 }

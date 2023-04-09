@@ -86,7 +86,7 @@ if(isset($_SESSION['login'])){
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active2">
                 <a class="nav-link" href="{{route('maquinasW')}}">
-                    <i class="fa-solid fa-dog"></i>
+                    <i class="bi bi-speedometer"></i>
                     <span>Drugslide</span></a>
             </li>
 
@@ -168,19 +168,19 @@ if(isset($_SESSION['login'])){
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="{{route('perfilCliente')}}">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="bi bi-file-earmark-binary mr-2 text-gray-400"></i>
                                     Tu perfil
                                 </a>
 
-                                <a class="dropdown-item" href="{{route('ReporteCliente')}}"><i
+                                <a class="dropdown-item" href="{{route('Tureporte')}}"><i
                                         class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Reportes </a>
-                                <a class="dropdown-item" href="{{route('GraficaCliente')}}"><i
-                                        class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <a class="dropdown-item" href="{{route('GraficaCliente')}}"><i class="bi bi-bar-chart text-gray-400"></i>
                                     Estadisticas </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+
                                     Logout
                                 </a>
                             </div>

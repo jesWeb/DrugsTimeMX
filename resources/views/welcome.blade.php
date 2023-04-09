@@ -36,7 +36,7 @@
                 <ul class="navbar-nav m-2">
                     {{-- home --}}
                     <li class="nav-item border-bottom">
-                        <a class="nav-link active" aria-current="page" href="{{route('/')}}">inicio</a>
+                        <a class="nav-link active" aria-current="page" href="">inicio</a>
                     </li>
                     {{-- slide --}}
                     <li class="nav-item">
