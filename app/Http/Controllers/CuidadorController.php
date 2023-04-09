@@ -58,7 +58,7 @@ class CuidadorController extends Controller
          $Telefono = $request->Telefono;
          $lugarTrabajo = $request->lugarTrabajo;
          $email = $request->email;
-         $idTratamiento = $request->idTratamiento;
+         $idTratamiento = $request  ->idTratamiento;
 
          $email = $_SESSION['email'];
          $idCliente = Cliente::where('email', $email)->get();

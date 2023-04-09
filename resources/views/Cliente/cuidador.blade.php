@@ -34,16 +34,18 @@
                         <tbody>
                             {{-- consulta eloquente en vista  --}}
                             @foreach($cuidadores as $cuidado)
-                                <tr>
-                                    <td>{{$cuidado->id}}</td>
-                            <td>{{$cuidado->nombre}}</td>
-                            <td>{{$cuidado->parentesco}}</td>
-                            <td>{{$cuidado->lugarTrabajo}}</td>
-                            <td>{{$cuidado->Telefono}}</td>
-                            <td>{{$cuidado->email}}</td>
-                            <td>
-                                <a class="btn btn-danger" href="{{route('cuidadordelate', ['id' => $cuidado->id ])}}"><i class="bi bi-trash"></i></a>
-                            </td>
+                            <tr>
+                                <td>{{$cuidado->id}}</td>
+                                <td>{{$cuidado->nombre}}</td>
+                                <td>{{$cuidado->parentesco}}</td>
+                                <td>{{$cuidado->lugarTrabajo}}</td>
+                                <td>{{$cuidado->Telefono}}</td>
+                                <td>{{$cuidado->email}}</td>
+                                <td>
+                                    <a class="btn btn-danger"
+                                        href="{{route('cuidadordelate', ['id' => $cuidado->id ])}}"><i
+                                            class="bi bi-trash"></i></a>
+                                </td>
                             </tr>
                             @endforeach
 

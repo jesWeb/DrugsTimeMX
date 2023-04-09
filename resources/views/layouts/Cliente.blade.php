@@ -33,6 +33,8 @@ if(isset($_SESSION['login'])){
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    {{-- graficas --}}
+
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
@@ -60,7 +62,7 @@ if(isset($_SESSION['login'])){
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/cliente">
+                <a class="nav-link" href="">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span></a>
             </li>
@@ -72,21 +74,21 @@ if(isset($_SESSION['login'])){
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active1">
-                <a class="nav-link" href="/tratamiento">
+                <a class="nav-link" href="{{route('tratamiento')}}">
                     <i class="fa-solid fa-clock"></i>
                     <span>Tratamientos</span></a>
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active1">
-                <a class="nav-link" href="/medicamento">
+                <a class="nav-link" href="{{route('viewMedicamento')}}">
                     <i class="fa-solid fa-toolbox"></i>
                     <span>Medicamentos</span></a>
             </li>
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active2">
-                <a class="nav-link" href="/maquinas">
-                    <i class="fa-solid fa-dog"></i>
+                <a class="nav-link" href="{{route('maquinasW')}}">
+                    <i class="bi bi-speedometer"></i>
                     <span>Drugslide</span></a>
             </li>
 
@@ -167,20 +169,20 @@ if(isset($_SESSION['login'])){
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <a class="dropdown-item" href="{{route('perfilCliente')}}">
+                                    <i class="bi bi-file-earmark-binary mr-2 text-gray-400"></i>
                                     Tu perfil
                                 </a>
 
-                                <a class="dropdown-item" href=""><i
+                                <a class="dropdown-item" href="{{route('Tureporte')}}"><i
                                         class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Reportes </a>
-                                <a class="dropdown-item" href=""><i
-                                        class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <a class="dropdown-item" href="{{route('GraficaCliente')}}"><i class="bi bi-bar-chart text-gray-400"></i>
                                     Estadisticas </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+
                                     Logout
                                 </a>
                             </div>
