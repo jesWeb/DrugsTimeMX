@@ -10,7 +10,7 @@ class Tratamiento extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $primaryKey = 'tratamientos';
+    protected $primaryKey = 'idTratamiento';
 
     protected $fillable =[
         'nombre',

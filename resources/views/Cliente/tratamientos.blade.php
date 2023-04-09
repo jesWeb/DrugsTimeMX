@@ -39,9 +39,7 @@
                                 <td>{{$recomend->horario}}</td>
                                 <td>{{$recomend->dias}}</td>
                                 <td>
-                                    <a class="btn btn-danger"
-                                        href="{{route('Tratamientodelate', ['id' => $recomend->id ])}}"><i
-                                            class="bi bi-trash"></i></a>
+                                    <a class="btn btn-danger" href="{{route('Tratamientodelate', ['id' => $recomend->id ])}}"><i  class="bi bi-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach

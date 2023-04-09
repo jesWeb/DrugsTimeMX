@@ -72,7 +72,7 @@ Route::prefix('tratamientos')->group(function () {
     Route::get('/view', [TratamientoController::class, 'index'])->name('tratamiento');
     Route::get('/create', [TratamientoController::class, 'TrataC'])->name('TratamientoAdd');
     Route::post('/create/tratamiento', [TratamientoController::class, 'TratamientoCreate'])->name('TratamientoCreate');
-    Route::delete('/delate/tratamiento/{id}', [TratamientoController::class, 'Tratamientodelate'])->name('Tratamientodelate');
+    Route::get('/delate/tratamiento/{id}', [TratamientoController::class, 'Tratamientodelate'])->name('Tratamientodelate');
 });
 /////Medicamento////
 Route::prefix('medicamentos')->group(function () {
