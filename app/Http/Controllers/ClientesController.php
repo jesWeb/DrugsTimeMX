@@ -87,6 +87,12 @@ class ClientesController extends Controller
         $cliente->save();
 
         $_SESSION['nombre'] = $nombre;
+        if($sexo == "Masculino"){
+            $_SESSION['img'] = 'user.png';
+        }else{
+            $_SESSION['img'] = 'user2.png';
+        }
+
         //vista de alerta
         return back()->withErrors(['success' => 'Se han guardado correctamente los datos'])->withInput();
         //vista de guardado

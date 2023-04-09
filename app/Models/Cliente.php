@@ -25,7 +25,7 @@ class Cliente extends Model
         'enfermedades',
         'email',
         'password',
-        'idTUsuariod'
+        'idTUsuario'
     ];
 
     //LLAVES FORANEAS RELACION

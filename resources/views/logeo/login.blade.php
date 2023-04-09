@@ -30,8 +30,8 @@
                 {{-- links --}}
                 <ul class="navbar-nav m-2">
                     {{-- home --}}
-                    <li class="nav-item border-bottom">
-                        <a class="nav-link active" aria-current="page" href="#">inicio</a>
+                    <li class="nav-item ">
+                        <a class="nav-link " aria-current="page" href="#">inicio</a>
                     </li>
                     {{-- slide --}}
                     <li class="nav-item">
@@ -42,8 +42,8 @@
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
                     {{-- session --}}
-                    <li class="nav-item">
-                        <a class="nav-link " href="{{route('loginAuth')}}" tabindex="-1" aria-disabled="true">
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link active" href="{{route('loginAuth')}}" tabindex="-1" aria-disabled="true">
                             iniciar sesion / Registrate</a>
                     </li>
                 </ul>
@@ -66,7 +66,7 @@
                         <hr>
                         <p>Si tienes una cuenta, inicia sesión con tu correo electrónico.</p>
                     </div>
-                    <form name="login" action="" method="GET">
+                    <form name="login" action="{{route('Reingreso')}}" method="POST">
                         {{csrf_field()}}
                         <!-- mail -->
                         <div class="foarm-floating p-2">
@@ -78,7 +78,7 @@
                         <!-- password -->
                         <div class="foarm-floating mt-3 p-2">
                             <label for="floatingInput">Contraseña</label>
-                            <input type="text" class="form-control" id="pass" name="pass" placeholder="password"
+                            <input type="password" class="form-control" id="pass" name="pass" placeholder="password"
                                 value="">
 
                         </div>

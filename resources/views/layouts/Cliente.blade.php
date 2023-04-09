@@ -2,7 +2,7 @@
 //validacion de session
 session_start();
 //validacion de usuario si estas te dejo en info si no cual quier vista
-if(isset($_SESSION['login'])){
+if(isset($_SESSION['login']) && $_SESSION['login'] === 1){
 
 }else {?>
 
@@ -34,7 +34,7 @@ if(isset($_SESSION['login'])){
     <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     {{-- graficas --}}
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
@@ -164,7 +164,9 @@ if(isset($_SESSION['login'])){
                             ?>
 
                                 </span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="{{asset('uploads/img/')}}/<?php
+                                if(isset($_SESSION['img'])){echo $_SESSION['img'];}else{ echo 'user.jpg';}
+                            ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

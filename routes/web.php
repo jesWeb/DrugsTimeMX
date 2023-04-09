@@ -33,6 +33,7 @@ Route::prefix('auth')->group(function () {
     Route::post('/user/resgister', [AuthController::class, 'registerCreate'])->name('registerCreate');
     Route::get('/user/activacion', [AuthController::class, 'activacion'])->name('activacion');
     Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
+    Route::POST('/InicioSession', [AuthController::class, 'Reingreso'])->name('Reingreso');
 });
 
 
