@@ -10,7 +10,7 @@
                 <h3 class="m-1 font-weight-bold text-primary">Tus Medicamentos</h3>
                 {{-- btn link --}}
                 <div class="d-flex justify-content-end">
-                    <a class="btn btn-primary " href="{{route('MediAdd')}}">Agregar Medicamento<i
+                    <a class="btn btn-primary " href="{{ route('MediAdd') }}">Agregar Medicamento<i
                             class=" m-2 fa-solid fa-plus" style="color: #fcfcfc;"></i></a>
                 </div>
             </div>
@@ -29,27 +29,24 @@
                                 <!-- <th>Operaciones</th> -->
                             </tr>
                         <tbody>
+                            @php
+                                $i = 1;
+                            @endphp
                             {{-- consulta eloquente en vista  --}}
-                            {{-- @foreach($medicamentos as $medicamento)
-                            <tr>
-                                <td>{{$medicamento->id}}</td>
-                            <td>{{$medicamento->nombre}}</td>
-                            <td>{{$medicamento->tipo}}</td>
-                            <td>{{$medicamento->descripcion}}</td>
-                            <td>
-                                <div class="row justify-content-center">
-                                    <div class="col-auto">
-                                        <form action="medicamento/{{$medicamento->id}}" method="post">
-                                            {!! csrf_field() !!}
-                                            @method("delete")
-                                            <button class="btn btn-danger " type="submit"><i
-                                                    class="fa-solid fa-trash"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </td>
-                            </tr>
-                            @endforeach --}}
+                            @foreach ($medicamentos as $medicamento)
+                                <tr>
+                                    <td>{{ $i }}</td>
+                                    <td>{{ $medicamento->nombre }}</td>
+                                    <td>{{ $medicamento->tipo }}</td>
+                                    <td>{{ $medicamento->descripcion }}</td>
+                                    <td>
+                                        <a class="btn btn-danger" href=""><i class="bi bi-trash"></i></a>
+                                    </td>
+                                </tr>
+                                @php
+                                    $i++;
+                                @endphp
+                            @endforeach
                         </tbody>
                         </thead>
                     </table>
@@ -57,5 +54,5 @@
             </div>
         </div>
     </div>
-</body>
+    </body>
 @stop

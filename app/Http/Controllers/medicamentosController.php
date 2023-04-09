@@ -23,7 +23,8 @@ class medicamentosController extends Controller
      public function MediAdd()
      {
         //vistaForm
-         return view('Cliente.MedicamentoAdd');
+        $recomendacion = Tratamiento::all();
+         return view('Cliente.MedicamentoAdd', compact('recomendacion'));
      }
 
 
@@ -57,7 +58,8 @@ class medicamentosController extends Controller
          'nombre' => $nombre,
          'descripcion' => $descripcion,
          'tipo' => $tipo,
-         'idTratamiento' => $idTratamiento,
+         'tratamientos_id' => $idTratamiento,
+         'idCliente' => $idCliente[0]->idCliente,
 
          ]);
          //vista de alerta

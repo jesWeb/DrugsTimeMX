@@ -120,6 +120,4 @@ class ClientesController extends Controller
         return view('Cliente.graficas');
     }
 
-
-
 }
