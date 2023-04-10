@@ -31,7 +31,7 @@ class medicamentosController extends Controller
      public function createMedicamento(Request $request){
         session_start();
         $validacion = $request->validate([
-            'nombre' => 'required|min:10',
+            'nombre' => 'required',
             'descripcion' => 'required',
             'tipo' => 'required',
             'idTratamiento' => 'required',
