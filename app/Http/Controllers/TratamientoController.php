@@ -49,7 +49,6 @@ class TratamientoController extends Controller
         $idCliente = Cliente::where('email', $email)->get();
 
         Tratamiento::create([
-
             'nombre' => $nombre,
             'dosis' => $dosis,
             'horario' => $horario,

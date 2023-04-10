@@ -60,8 +60,8 @@ class CuidadorController extends Controller
          $email = $request->email;
          $idTratamiento = $request  ->idTratamiento;
 
-         $email = $_SESSION['email'];
-         $idCliente = Cliente::where('email', $email)->get();
+         $emailSession = $_SESSION['email'];
+         $idCliente = Cliente::where('email', $emailSession)->get();
 
          Cuidador::create([
 
