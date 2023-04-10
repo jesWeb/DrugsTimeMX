@@ -28,7 +28,7 @@ class TratamientoController extends Controller
       public function TratamientoCreate(Request $request){
         session_start();
         $validacion = $request->validate([
-            'nombre' => 'required|min:20',
+            'nombre' => 'required',
             'dosis' => 'required',
             'horario' => 'required',
             'dias' => 'required',
