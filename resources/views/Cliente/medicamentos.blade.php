@@ -18,7 +18,7 @@
             <div class="card-body">
                 <div class="table-responsive">
                     {{-- tabla --}}
-                    <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered text-center" id="example" style="overflow-x:auto;" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>id</th>

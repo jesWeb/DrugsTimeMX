@@ -5,6 +5,7 @@ use App\Models\Cliente;
 use Illuminate\Http\Request;
 use App\Models\estados;
 use App\Models\municipios;
+use Illuminate\Support\Facades\DB;
 
 class ClientesController extends Controller
 {
@@ -124,6 +125,24 @@ class ClientesController extends Controller
     public function grafica()
     {
         return view('Cliente.graficas');
+    }
+
+    public function graficaMedicamento(){
+        session_start();
+        $email = $_SESSION['email'];
+
+        $idCliente = Cliente::where('email', $email)->get();
+        $medicamentoSQL = DB::select('SELECT nombre, COUNT(nombre) AS cantidad  FROM medicamentos WHERE idCliente = '.$idCliente[0]->idCliente.' GROUP BY 1 HAVING COUNT(nombre) >= 1');
+        return response(json_encode($medicamentoSQL), 200)->header('Content-type', 'text/plain');
+    }
+
+    public function graficaTratamiento(){
+        session_start();
+        $email = $_SESSION['email'];
+
+        $idCliente = Cliente::where('email', $email)->get();
+        $tratamientosSQL = DB::select('SELECT *, COUNT(nombre) AS cantidad FROM tratamientos WHERE idCliente ='.$idCliente[0]->idCliente.' GROUP BY 1 HAVING COUNT(nombre) >= 1');
+        return response(json_encode($tratamientosSQL), 200)->header('Content-type', 'text/plain');
     }
 
 }
