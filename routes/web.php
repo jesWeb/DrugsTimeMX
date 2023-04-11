@@ -57,6 +57,8 @@ Route::prefix('peticiones')->group(function () {
     Route::post('/user/saveSettingsC', [ClientesController::class, 'saveSettingsC'])->name('saveSettingsC');
     Route::post('/user/perfilC', [ClientesController::class, 'perfilC'])->name('perfilC');
     Route::get('/user/get/municipios', [ClientesController::class, 'municipios'])->name('getMunicipio');
+    Route::get('/graficas/graficaMedicamento', [ClientesController::class, 'graficaMedicamento'])->name('graficaMedicamento');
+    Route::get('/graficas/graficaTratamiento', [ClientesController::class, 'graficaTratamiento'])->name('graficaTratamiento');
 
 });
 
