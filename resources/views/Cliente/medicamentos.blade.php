@@ -36,11 +36,13 @@
                             @foreach ($medicamentos as $medicamento)
                                 <tr>
                                     <td>{{ $i }}</td>
+                                    <td>{{ $medicamento->id }}</td>
                                     <td>{{ $medicamento->nombre }}</td>
                                     <td>{{ $medicamento->tipo }}</td>
                                     <td>{{ $medicamento->descripcion }}</td>
                                     <td>
-                                        <a class="btn btn-danger" href=""><i class="bi bi-trash"></i></a>
+                                    {{-- <a class="btn btn-danger" href="{{ route('delateMedicamento', ['id' => $medicamento->id ]) }}"><i  class="bi bi-trash"></i></a> --}}
+
                                     </td>
                                 </tr>
                                 @php

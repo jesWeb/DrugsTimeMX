@@ -69,7 +69,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] === 1){
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active3">
                 <a class="nav-link" href="{{route('cuidador')}}">
-                    <i class="fa-solid fa-user-doctor"></i>
+                    <i class="bi bi-person-circle mr-2 text-gray-400"></i>
                     <span>Cuidadores</span></a>
             </li>
             <!-- Nav Item - Dashboard -->
@@ -81,14 +81,14 @@ if(isset($_SESSION['login']) && $_SESSION['login'] === 1){
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active1">
                 <a class="nav-link" href="{{route('viewMedicamento')}}">
-                    <i class="fa-solid fa-toolbox"></i>
+                    <i class="bi bi-capsule mr-2 text-gray-400 "></i>
                     <span>Medicamentos</span></a>
             </li>
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active2">
                 <a class="nav-link" href="{{route('maquinasW')}}">
-                    <i class="bi bi-speedometer"></i>
+                    <i class="bi bi-alarm  mr-2 text-gray-00"></i>
                     <span>Drugslide</span></a>
             </li>
 
@@ -116,7 +116,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] === 1){
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
+                    {{-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -127,7 +127,7 @@ if(isset($_SESSION['login']) && $_SESSION['login'] === 1){
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> --}}
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -172,7 +172,8 @@ if(isset($_SESSION['login']) && $_SESSION['login'] === 1){
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="{{route('perfilCliente')}}">
-                                    <i class="bi bi-file-earmark-binary mr-2 text-gray-400"></i>
+                                    <i class="bi bi-person-circle mr-2 text-gray-400"></i>
+
                                     Tu perfil
                                 </a>
 

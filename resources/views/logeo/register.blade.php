@@ -13,12 +13,14 @@
 </head>
 <header>
     {{-- menu --}}
-    <div class="container-fluid bg-dark fixed-top  ">
+    <div class="container-fluid bg-primary fixed-top  ">
         {{-- navb --}}
         <nav class="navbar navbar-expand-lg shadow-md navbar-dark  justify-content-around">
             {{-- content - nav --}}
             {{-- img --}}
-            <a class="navbar-brand" href="">Drugtime</a>
+            <a class="navbar-brand mx-3  " href="#">
+
+                DrugTime.MX<sup>®</sup></a>
             <!-- collapse btn -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

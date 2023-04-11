@@ -61,13 +61,13 @@ Route::prefix('peticiones')->group(function () {
 });
 
   ///////////////Cuidador/////////////////
-Route::prefix('cuidador')->group(function (){
+// Route::prefix('cuidador')->group(function (){
 
-  Route::get('/view', [CuidadorController::class, 'index'])->name('cuidador');
-  Route::get('/create', [CuidadorController::class, 'CAdd'])->name('cuidadorAdd');
-  Route::post('/create/cuidador', [CuidadorController::class, 'cuidadorCreate'])->name('cuidadorCreate');
-  Route::get('/delate/cuidador/{id}', [CuidadorController::class, 'cuidadordelate'])->name('cuidadordelate');
-});
+//   Route::get('/view', [CuidadorController::class, 'index'])->name('cuidador');
+//   Route::get('/create', [CuidadorController::class, 'CAdd'])->name('cuidadorAdd');
+//   Route::post('/create/cuidador', [CuidadorController::class, 'cuidadorCreate'])->name('cuidadorCreate');
+//   Route::get('/delate/cuidador/{id}', [CuidadorController::class, 'cuidadordelate'])->name('cuidadordelate');
+// });
 
 ///////////////Cuidador/////////////////
 Route::prefix('cuidador')->group(function () {
@@ -90,7 +90,7 @@ Route::prefix('medicamentos')->group(function () {
     Route::get('/view/medicamentos', [medicamentosController::class, 'viewMedicamento'])->name('viewMedicamento');
     Route::get('/create', [medicamentosController::class, 'MediAdd'])->name('MediAdd');
     Route::post('/create/medicamento', [medicamentosController::class, 'createMedicamento'])->name('createMedicamento');
-    Route::delete('delete/medicamento/{id}', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
+    Route::get('delete/medicamento/{id}', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
 });
 ////MAquina//
 

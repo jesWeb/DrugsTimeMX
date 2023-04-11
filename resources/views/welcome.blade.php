@@ -24,7 +24,9 @@
         <nav class="navbar navbar-expand-lg shadow-md navbar-dark  justify-content-around">
             {{-- content - nav --}}
             {{-- img --}}
-            <a class="navbar-brand" href="#">Drugtime</a>
+            <a class="navbar-brand mx-3  " href="#">
+               
+                DrugTime.MX<sup>®</sup></a>
             <!-- collapse btn -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,6 +59,7 @@
     </div>
 </header>
 {{-- body --}}
+
 <body class="mt-3">
     <div class="container">
         <!--PROMO-slider-->
@@ -91,81 +94,71 @@
                         alt="...">
                     <!-- descripcion-slider -->
                     <div class="carousel-caption d-none d-md-block text-center  h3">
-                        <h3 >DrugTime</h3>
+                        <h3>DrugTime</h3>
                         <p>Nuestra empresa esta comprometida con el medio ambiente.</p>
                     </div>
                 </div>
             </div>
         </div>
         <!--about us--->
-        <section class="mb-4 mt-2 ">
-            <div class="row justify-content-center">
-                <!--PROMO--->
-                <div class="col-4">
-                    <!-- cards -->
-                    <div class="card text-center boxInfo ">
-                        <!-- imagenes -->
-                        <img src="{{asset('img/icons/atencion-medica.png')}}" style="height: 150px; Width:150px;"
-                            alt="atencion medica">
-                        <!-- descripciom -->
+        <section class="mb-4 mt-4 ">
+            <div class="content-promo">
+                {{-- promo1 --}}
+                <div class="boxinfo card shadow">
+                    <!-- imagenes -->
+                    <img src="{{asset('img/icons/atencion-medica.png')}}" class="img-fluid img-cards  "
+                        alt="atencion medica">
+                    <!-- descripciom -->
+                    <div class="card-body">
                         <h4>Asistencia</h4>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, autem?</p>
                     </div>
                 </div>
-                <!--PROMO--->
-                <div class="col-4">
-                    <!-- cards -->
-                    <div class="card text-center boxInfo ">
-                        <!-- imagenes -->
-                        <img src="{{asset('img/icons/equipo-medico.png')}}" style="height: 150px; Width:150px;"
-                            alt="medicos y cuidadores">
-                        <!-- descripciom -->
-                        <div class="mt-2">
-                            <h4>Cuidado </h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, autem?</p>
-                        </div>
+                {{-- promo 2--}}
+                <div class="boxinfo card shadow">
+
+                    <img src="{{asset('img/icons/equipo-medico.png')}}" class="img-fluid img-cards  "
+                        alt="medicos y cuidadores">
+
+                    <div class="card-body">
+                        <h4>Seguimiento</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, autem?</p>
                     </div>
+
                 </div>
-                <!--PROMO--->
-                <div class="col-4">
-                    <!-- cards -->
-                    <div class="card text-center boxInfo ">
-                        <!-- imagenes -->
-                        <img src="{{asset('img/icons/registros-medicos.png')}}" style="height: 150px; Width:150px;"
-                            alt="lista de medicamentos">
-                        <!-- descripciom -->
-                        <div class="mt-3">
-                            <h4>Seguimiento</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, autem?</p>
-                        </div>
+                {{-- promo 3--}}
+                <div class="boxinfo card shadow">
+                    <img src="{{asset('img/icons/registros-medicos.png')}}" class="img-fluid img-cards "
+                        alt="lista de medicamentos">
+                    <div class="card-body">
+                        <h4>Cuidado </h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, autem?</p>
                     </div>
                 </div>
             </div>
-
-
         </section>
         <!--drugslide-->
-        <section class="mt-4" id="maquina">
-            <div class="row align-items-center justify-content-center bg-light" style=" Width:80v-max;">
-                <!--PROMO--->
-                <div class="col-6">
-                    <div class="d-flex justify-content-center ">
-                        <div class="promo-img">
-                            <img src="{{asset('img/visuales/relog.jpg')}}" class="img-fluid rounded-start"
-                                style="height: 50v-max; Width:30vw;" alt="relog">
-                        </div>
-                    </div>
+        <section class="mt-5 drugs" id="maquina">
+            <div class="drugtext">
+                <h3 class="  text-center">
+                    Funcionalidad al alcance de tu mano
+                </h3>
+            </div>
+            <div class="Drug ">
+
+                {{-- img --}}
+                <div class="">
+                    <img src="{{asset('img/visuales/relog.jpg')}}" class="img-fluid rounded Drug-img" alt="relog">
                 </div>
-                <!--PROMO--->
-                <div class="col-6 ">
-                    <div class=" text-center  ">
-                        <h4>Adquiere tu Drugslide </h4>
-                        <p>Tomar ahora tus medicamentos sera muy futurista </p>
-                        <a href="" class="btn btn-primary">Comprar ahora </a>
-                    </div>
+                {{-- button descripcion --}}
+                <div class="" ">
+
+                    <h4>Adquiere tu Drugslide </h4>
+                    <p>Tomar ahora tus medicamentos sera muy futurista </p>
+                    <a href="" class="btn btn-primary">Comprar ahora </a>
+
                 </div>
             </div>
-
         </section>
     </div>
 </body>
@@ -176,20 +169,19 @@
         <div class="col-auto align-self-center mr-4 m-5">
             <div class="row">
 
-                 <!-- description -->
-        <div class="col-auto mr-2">
-            <div class="row">
-                <!-- content -->
-                <div class="mt-5 mb-2 text-center  text-light col-12">
-                    <p>Derechos reservados © 2023 | DrugTime.MX</p>
+                <!-- description -->
+                <div class="col-auto mr-2">
+                    <div class="row">
+                        <!-- content -->
+                        <div class="mt-5 mb-2 text-center  text-light col-12">
+                            <p>Derechos reservados © 2023 | DrugTime.MX</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
             </div>
 
         </div>
     </div>
 </footer>
-
 
 </html>

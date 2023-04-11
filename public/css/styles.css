@@ -12,20 +12,57 @@
 }
 
 footer{
-background:#184BBB  ;
+/* background:#184BBB  ; */
+background: linear-gradient(159.37deg, #184BBB 40%, rgb(0, 206, 199) 95%);
 
+}
+
+
+p{
+    font-size: 16px;
+}
+
+
+
+.content-promo{
+   display: flex;
+   justify-content:space-evenly;
+ align-items: center;
 
 
 }
 
 
+.boxinfo{
+    text-align: center;
+    width: 18rem;
+    margin: 15px 15px 15px 15px;
+}
 
+.img-cards{
+    height: 120px;
+    Width:120px;
+   margin: auto;
 
+ }
 
+ .Drug{
 
+display: flex;
+justify-content:space-around;
+align-items: center;
 
+ }
 
+ .drugtext h3{
+    font-size: 50px;
+    font-family:sans-serif ;
+    margin: 4rem;
+ }
 
+.Drug-img{
+    width: 50%;
+}
 
 
 
