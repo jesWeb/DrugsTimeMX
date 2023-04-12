@@ -29,7 +29,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button"
-                        role="tab" aria-controls="contact" aria-selected="false">Cuidadores</button>
+                        role="tab" aria-controls="contact" aria-selected="false">Dispensador</button>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">

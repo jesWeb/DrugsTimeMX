@@ -16,17 +16,16 @@
             </div>
             {{-- tabala de contenido --}}
             <div class="card-body">
-                <div class="table-responsive">
-                    {{-- tabla --}}
-                    <table class="table table-bordered text-center" id="example" style="overflow-x:auto;" width="100%" cellspacing="0">
+                <div class="table-responsive ">
+                    <table class=" table table-bordered  text-center" id="example" style="overflow-x:auto;" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>id</th>
                                 <th>Nombre</th>
-                                <th>Administracion</th>
                                 <th>Descripcion</th>
-                                <th>Tratamiento</th>
-                                <!-- <th>Operaciones</th> -->
+                                <th>Tipo</th>
+                                <th>Tratamieto</th>
+                                <th>Eliminar</th>
                             </tr>
                         <tbody>
                             @php
@@ -36,10 +35,10 @@
                             @foreach ($medicamentos as $medicamento)
                                 <tr>
                                     <td>{{ $i }}</td>
-                                    <td>{{ $medicamento->id }}</td>
                                     <td>{{ $medicamento->nombre }}</td>
-                                    <td>{{ $medicamento->tipo }}</td>
                                     <td>{{ $medicamento->descripcion }}</td>
+                                    <td>{{ $medicamento->tipo }}</td>
+                                    <td>{{ $medicamento->tratamientos_id}}</td>
                                     <td>
                                     {{-- <a class="btn btn-danger" href="{{ route('delateMedicamento', ['id' => $medicamento->id ]) }}"><i  class="bi bi-trash"></i></a> --}}
 

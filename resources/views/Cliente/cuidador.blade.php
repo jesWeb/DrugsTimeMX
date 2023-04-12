@@ -4,12 +4,12 @@
 
 <div class="container-fluid">
     <!-- DataTales Example -->
-    <div class="card shadow mb-3">
+    <div class=" mb-3">
         <!-- DataTales Example -->
-        <div class="card shadow mb-4">
+        <div class="card mb-4">
             <div class="card-header py-3">
                 {{-- titulo --}}
-                <h3 class="m-1 font-weight-bold text-primary">Tus Cuidadores</h3>
+                <h3 class=" font-weight-bold text-primary">Tus Cuidadores</h3>
                 {{-- btn-cuidador --}}
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary " href="{{route('cuidadorAdd')}}">Agregar Cuidador<i
@@ -17,7 +17,7 @@
                 </div>
             </div>
             {{-- tabla de contenido --}}
-            <div class="card-body">
+            <div class="mt-3">
                 <div class="table-responsive">
                     <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
                         <thead>

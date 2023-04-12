@@ -216,10 +216,6 @@ if(isset($_SESSION['login']) && $_SESSION['login'] === 1){
             </div>
 </header>
 
-<body>
-
-</body>
-
 
 <!-- End of Footer -->
 

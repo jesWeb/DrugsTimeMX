@@ -29,7 +29,7 @@ class CuidadorController extends Controller
      public function cuidadorCreate(Request $request){
         session_start();
         $validacion = $request->validate([
-            'nombre' => 'required|min:3',
+            'nombre' => 'required',
             'fechaN' => 'required',
             'sexo' => 'required',
             'parentesco' => 'required',
@@ -87,7 +87,7 @@ class CuidadorController extends Controller
         //ELIMINAR
         $cuidado = Cuidador::findOrFail($id);
         $cuidado ->delete();
-        return "El resgistro se elimino con exito";
+        return back()->withErrors(['success' => 'Se han borrado correctamente los datos'])->withInput();
     }
 
 

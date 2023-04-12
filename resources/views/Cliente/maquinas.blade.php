@@ -2,7 +2,7 @@
 @section('title', 'Informacion')
 @section('content')
 
-<div class="container-fluid">
+<div class="container">
         <!-- DataTales Example -->
         <div class="card shadow mb-3">
             <!-- DataTales Example -->
