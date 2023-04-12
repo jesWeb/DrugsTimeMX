@@ -11,7 +11,7 @@ class Maquina extends Model
     use SoftDeletes;
     protected $fillable =[
         'nombre',
-        'Modelo',
+        'temperatura',
         'Humedad'
     ];
 }

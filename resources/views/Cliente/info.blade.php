@@ -42,7 +42,7 @@
                             })
                         });
                     </script>
-                    <div class=" ">
+                    <div class=" p-3">
                         <form class="row" enctype="multipart/form-data" id="formulario-settings"
                             method="post"action="{{ route('saveSettingsC') }}">
                             @csrf

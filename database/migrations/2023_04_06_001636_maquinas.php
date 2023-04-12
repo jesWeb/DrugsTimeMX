@@ -15,8 +15,8 @@ return new class extends Migration
         Schema::create('maquinas', function (Blueprint $table)  {
             $table->id();
             $table->string('nombre');
-            $table->string('Modelo');
-            $table->string('Humedad');
+            $table->string('temperatura')->nullable();;
+            $table->string('Humedad')->nullable();;
             $table->timestamps();
              //llave foranea
              $table->unsignedBigInteger('idCliente');

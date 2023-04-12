@@ -28,25 +28,22 @@
                                 <th>Eliminar</th>
                             </tr>
                         <tbody>
-                            @php
-                                $i = 1;
-                            @endphp
+
                             {{-- consulta eloquente en vista  --}}
                             @foreach ($medicamentos as $medicamento)
                                 <tr>
-                                    <td>{{ $i }}</td>
+                                    {{-- <td>{{ $i }}</td> --}}
+                                    <td>{{ $medicamento->idMedica }}</td>
                                     <td>{{ $medicamento->nombre }}</td>
                                     <td>{{ $medicamento->descripcion }}</td>
                                     <td>{{ $medicamento->tipo }}</td>
                                     <td>{{ $medicamento->tratamientos_id}}</td>
                                     <td>
-                                    {{-- <a class="btn btn-danger" href="{{ route('delateMedicamento', ['id' => $medicamento->id ]) }}"><i  class="bi bi-trash"></i></a> --}}
+                                    <a class="btn btn-danger" href="{{ route('delateMedicamento', ['idMedica' => $medicamento->idMedica ]) }}"><i  class="bi bi-trash"></i></a>
 
                                     </td>
                                 </tr>
-                                @php
-                                    $i++;
-                                @endphp
+
                             @endforeach
                         </tbody>
                         </thead>

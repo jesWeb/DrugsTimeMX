@@ -74,7 +74,7 @@ class CuidadorController extends Controller
          'lugarTrabajo' => $lugarTrabajo,
          'email' => $email,
          'idCliente' => $idCliente[0]->idCliente,
-         'idTratamiento' => $idTratamiento,
+        //  'idTratamiento' => $idTratamiento,
 
          ]);
          //vista de alerta

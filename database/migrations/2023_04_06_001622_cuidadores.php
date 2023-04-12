@@ -26,8 +26,8 @@ return new class extends Migration
             $table->unsignedBigInteger('idCliente');
             $table->foreign('idCliente')->references('idCliente')->on('clientes');
 
-            $table->unsignedBigInteger('idTratamiento');
-            $table->foreign('idTratamiento')->references('idTratamiento')->on('tratamientos');
+            //  $table->unsignedBigInteger('idTratamiento');
+            //  $table->foreign('idTratamiento')->references('idTratamiento')->on('tratamientos');
             //$table->integer('imagenP');
             $table->timestamps();
             $table->softDeletes();

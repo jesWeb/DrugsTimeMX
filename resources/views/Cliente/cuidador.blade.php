@@ -45,6 +45,16 @@
                                     <a class="btn btn-danger"
                                         href="{{route('cuidadordelate', ['id' => $cuidado->id ])}}"><i
                                             class="bi bi-trash"></i></a>
+
+                                      @error('success')
+                                          <script>
+                                             Swal.fire(
+                                                    'Success',
+                                                    '{{ $message }}',
+                                                    'success'
+                                             )
+                                          </script>
+                                         @enderror
                                 </td>
                             </tr>
                             @endforeach

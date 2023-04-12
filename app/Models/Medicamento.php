@@ -10,7 +10,7 @@ class Medicamento extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'idMedica';
 
     protected $fillable =[
         'nombre',

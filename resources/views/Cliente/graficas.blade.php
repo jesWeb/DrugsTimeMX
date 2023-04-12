@@ -154,7 +154,7 @@
                 console.log(res);
                 var arreglo = JSON.parse(res);
                 for (let index = 0; index < arreglo.length; index++) {
-                    temperatura.push(arreglo[index].nombre);
+                    temperatura.push(arreglo[index].temp);
                     humedad.push(arreglo[index].cantidad);
                 }
                 console.log(temperatura);
@@ -164,13 +164,13 @@
         });
 
         function generarGrafica3() {
-            const ctx = document.getElementById('maquina');
+            const ctx = document.getElementById('maquinas');
             new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: temperatura,
                     datasets: [{
-                        label: 'maquina',
+                        label: 'maquinas',
                         data: humedad,
                         borderWidth: 1
                     }]

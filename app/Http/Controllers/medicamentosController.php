@@ -72,7 +72,7 @@ class medicamentosController extends Controller
         //ELIMINAR
         $medicamento = Medicamento::findOrFail($id);
         $medicamento ->delete();
-        return "El resgistro se elimino con exito";
+        return view('Cliente.medicamentos');
     }
 
 

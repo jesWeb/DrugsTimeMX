@@ -22,7 +22,7 @@ class Cuidador extends Model
         'matricula',
         'Telefono',
         'email',
-        'idTratamiento',
+        // 'idTratamiento',
         'idCliente'
     ];
 }

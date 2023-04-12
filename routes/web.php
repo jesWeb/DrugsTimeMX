@@ -80,11 +80,11 @@ Route::prefix('tratamientos')->group(function () {
 /////Medicamento////
 Route::prefix('medicamentos')->group(function () {
     Route::get('user/view/medicamentos', [medicamentosController::class, 'viewMedicamento'])->name('viewMedicamento');
-    Route::post('user/delete/medicamento', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
+    Route::post('delate/medicamentos/{id}', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
     Route::get('/view/medicamentos', [medicamentosController::class, 'viewMedicamento'])->name('viewMedicamento');
     Route::get('/create', [medicamentosController::class, 'MediAdd'])->name('MediAdd');
     Route::post('/create/medicamento', [medicamentosController::class, 'createMedicamento'])->name('createMedicamento');
-    Route::get('delete/medicamento/{id}', [medicamentosController::class, 'delateMedicamento'])->name('delateMedicamento');
+   // Route::get('/delate/medicamentos/{id}', [medicamentosController::class, 'eliminarMedi'])->name('eliminarMedi');
 });
 ////MAquina//
 
