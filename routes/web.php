@@ -59,17 +59,9 @@ Route::prefix('peticiones')->group(function () {
     Route::get('/user/get/municipios', [ClientesController::class, 'municipios'])->name('getMunicipio');
     Route::get('/graficas/graficaMedicamento', [ClientesController::class, 'graficaMedicamento'])->name('graficaMedicamento');
     Route::get('/graficas/graficaTratamiento', [ClientesController::class, 'graficaTratamiento'])->name('graficaTratamiento');
-
+    Route::get('/graficas/graficaSlider', [ClientesController::class, 'graficaSlider'])->name('graficaSlider');
 });
 
-  ///////////////Cuidador/////////////////
-// Route::prefix('cuidador')->group(function (){
-
-//   Route::get('/view', [CuidadorController::class, 'index'])->name('cuidador');
-//   Route::get('/create', [CuidadorController::class, 'CAdd'])->name('cuidadorAdd');
-//   Route::post('/create/cuidador', [CuidadorController::class, 'cuidadorCreate'])->name('cuidadorCreate');
-//   Route::get('/delate/cuidador/{id}', [CuidadorController::class, 'cuidadordelate'])->name('cuidadordelate');
-// });
 
 ///////////////Cuidador/////////////////
 Route::prefix('cuidador')->group(function () {

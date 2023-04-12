@@ -145,4 +145,13 @@ class ClientesController extends Controller
         return response(json_encode($tratamientosSQL), 200)->header('Content-type', 'text/plain');
     }
 
+    public function graficaSlider(){
+        session_start();
+        $email = $_SESSION['email'];
+
+        $idCliente = Cliente::where('email', $email)->get();
+        $maquinaSQL  = DB::select('SELECT *, COUNT(nombre) AS cantidad FROM maquina WHERE idCliente ='.$idCliente[0]->idCliente.' GROUP BY 1 HAVING COUNT(nombre) >= 1');
+        return response(json_encode($maquinaSQL), 200)->header('Content-type', 'text/plain');
+    }
+
 }

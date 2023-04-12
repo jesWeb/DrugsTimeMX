@@ -23,10 +23,12 @@
                     <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button"
                         role="tab" aria-controls="home" aria-selected="true">Medicamentos</button>
                 </li>
+                {{-- tratamientsos  --}}
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button"
                         role="tab" aria-controls="profile" aria-selected="false">Tratamientos</button>
                 </li>
+                {{-- dispensador --}}
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button"
                         role="tab" aria-controls="contact" aria-selected="false">Dispensador</button>
@@ -47,7 +49,7 @@
             </div>
         </div>
     </div>
-    {{--  --}}
+    {{--medicamentos  --}}
     <script>
         var fechas = [];
         var datos = [];
@@ -92,7 +94,7 @@
                 }
             });
         }
-
+        //tratamientos//
         var fechas2 = [];
         var datos2 = [];
         $(document).ready(function() {
@@ -136,5 +138,55 @@
                 }
             });
         }
+
+        //grafica de drugslide
+
+        const temperatura = [];
+        const humedad = [];
+        $(document).ready(function() {
+            $.ajax({
+                url: '{{ route('graficaSlider') }}',
+                method: 'GET',
+                data: {
+                    id: 1
+                }
+            }).done(function(res) {
+                console.log(res);
+                var arreglo = JSON.parse(res);
+                for (let index = 0; index < arreglo.length; index++) {
+                    temperatura.push(arreglo[index].nombre);
+                    humedad.push(arreglo[index].cantidad);
+                }
+                console.log(temperatura);
+                console.log(cantidad);
+                generarGrafica3();
+            })
+        });
+
+        function generarGrafica3() {
+            const ctx = document.getElementById('maquina');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: temperatura,
+                    datasets: [{
+                        label: 'maquina',
+                        data: humedad,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+
+
+
     </script>
 @stop
