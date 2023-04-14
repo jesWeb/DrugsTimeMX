@@ -45,11 +45,15 @@
                         <canvas id="Tratamientos" style="overflow-x:auto;"></canvas>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div>
+                        <canvas id="dispensador" style="overflow-x:auto;"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    {{--medicamentos  --}}
+    {{-- medicamentos  --}}
     <script>
         var fechas = [];
         var datos = [];
@@ -94,99 +98,108 @@
                 }
             });
         }
-        //tratamientos//
-        var fechas2 = [];
-        var datos2 = [];
-        $(document).ready(function() {
-            $.ajax({
-                url: '{{ route('graficaTratamiento') }}',
-                method: 'GET',
-                data: {
-                    id: 1
-                }
-            }).done(function(res) {
-                console.log(res);
-                var arreglo = JSON.parse(res);
-                for (let index = 0; index < arreglo.length; index++) {
-                    fechas2.push(arreglo[index].nombre);
-                    datos2.push(arreglo[index].cantidad);
-                }
-                console.log(fechas2);
-                console.log(datos2);
-                generarGrafica2();
-            })
-        });
 
-        function generarGrafica2() {
-            const ctx = document.getElementById('Tratamientos');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: fechas2,
-                    datasets: [{
-                        label: 'Tratamientos',
-                        data: datos2,
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
+        function tiempoReal() {
+            var fechas2 = [];
+            var datos2 = [];
+            $(document).ready(function() {
+                $.ajax({
+                    url: '{{ route('graficaTratamiento') }}',
+                    method: 'GET',
+                    data: {
+                        id: 1
+                    }
+                }).done(function(res) {
+                    console.log(res);
+                    var arreglo = JSON.parse(res);
+                    for (let index = 0; index < arreglo.length; index++) {
+                        fechas2.push(arreglo[index].nombre);
+                        datos2.push(arreglo[index].dosis);
+                    }
+                    console.log(fechas2);
+                    console.log(datos2);
+                    generarGrafica2();
+                })
+            });
+
+            function generarGrafica2() {
+                const ctx = document.getElementById('Tratamientos');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: fechas2,
+                        datasets: [{
+                            label: 'Tratamientos',
+                            data: datos2,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
                         }
                     }
-                }
-            });
+                });
+            }
         }
 
-        //grafica de drugslide
+        function maquina() {
+            var temperatura22 = [];
+            var humedad2 = [];
+            var fecha = [];
+            $(document).ready(function() {
+                $.ajax({
+                    url: '{{ route('graficaSlider')}}',
+                    method: 'GET',
+                    data: {
+                        id: 1
+                    }
+                }).done(function(res) {
+                    console.log(res);
+                    var arreglo = JSON.parse(res);
+                    for (let index = 0; index < arreglo.length; index++) {
+                        temperatura22.push(arreglo[index].temperatura);
+                        humedad2.push(arreglo[index].Humedad);
+                        fecha.push(arreglo[index].created_at);
+                    }
+                    generarGraficaMaquina();
+                })
+            });
 
-        const temperatura = [];
-        const humedad = [];
-        $(document).ready(function() {
-            $.ajax({
-                url: '{{ route('graficaSlider') }}',
-                method: 'GET',
-                data: {
-                    id: 1
-                }
-            }).done(function(res) {
-                console.log(res);
-                var arreglo = JSON.parse(res);
-                for (let index = 0; index < arreglo.length; index++) {
-                    temperatura.push(arreglo[index].temp);
-                    humedad.push(arreglo[index].cantidad);
-                }
-                console.log(temperatura);
-                console.log(cantidad);
-                generarGrafica3();
-            })
-        });
-
-        function generarGrafica3() {
-            const ctx = document.getElementById('maquinas');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: temperatura,
-                    datasets: [{
-                        label: 'maquinas',
-                        data: humedad,
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
+            function generarGraficaMaquina() {
+                const ctx = document.getElementById('dispensador');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: fecha,
+                        datasets: [{
+                            label: 'temperatura',
+                            data: temperatura22,
+                            backgroundColor:'rgba(255, 99, 132, 0.2)',
+                            borderWidth: 1
+                        },{
+                            label: 'humedad',
+                            data: humedad2,
+                            backgroundColor:'rgba(255, 99, 132, 0.2)',
+                            fillStyle: 'rgba(255, 99, 132, 0.2)'
+                            borderWidth: 1
+                        }
+                    ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
                         }
                     }
-                }
-            });
+                });
+            }
         }
-
-
-
-
+        setInterval(tiempoReal, 60000);
+        setInterval(maquina, 60000);
     </script>
+    </div>
 @stop

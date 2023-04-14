@@ -60,6 +60,7 @@ Route::prefix('peticiones')->group(function () {
     Route::get('/graficas/graficaMedicamento', [ClientesController::class, 'graficaMedicamento'])->name('graficaMedicamento');
     Route::get('/graficas/graficaTratamiento', [ClientesController::class, 'graficaTratamiento'])->name('graficaTratamiento');
     Route::get('/graficas/graficaSlider', [ClientesController::class, 'graficaSlider'])->name('graficaSlider');
+  
 });
 
 

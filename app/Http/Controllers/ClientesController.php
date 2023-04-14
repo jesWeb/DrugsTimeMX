@@ -150,7 +150,7 @@ class ClientesController extends Controller
         $email = $_SESSION['email'];
 
         $idCliente = Cliente::where('email', $email)->get();
-        $maquinaSQL  = DB::select('SELECT *, COUNT(temp) AS cantidad FROM maquinas WHERE idCliente ='.$idCliente[0]->idCliente.' GROUP BY 1 HAVING COUNT(nombre) >= 1');
+        $maquinaSQL  = DB::select('SELECT *, COUNT(temperatura) AS cantidad FROM maquinas WHERE idCliente ='.$idCliente[0]->idCliente.' GROUP BY 1 HAVING COUNT(nombre) >= 1');
         return response(json_encode($maquinaSQL), 200)->header('Content-type', 'text/plain');
     }
 
