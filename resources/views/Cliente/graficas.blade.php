@@ -177,13 +177,12 @@
                         datasets: [{
                             label: 'temperatura',
                             data: temperatura22,
-                            backgroundColor:'rgba(255, 99, 132, 0.2)',
+                            backgroundColor:'rgba(51, 173, 255, 0.2)',
                             borderWidth: 1
                         },{
                             label: 'humedad',
                             data: humedad2,
                             backgroundColor:'rgba(255, 99, 132, 0.2)',
-                            fillStyle: 'rgba(255, 99, 132, 0.2)'
                             borderWidth: 1
                         }
                     ]
@@ -199,7 +198,9 @@
             }
         }
         setInterval(tiempoReal, 60000);
+        //setInterval(tiempoReal, 5000);
         setInterval(maquina, 60000);
+        //setInterval(maquina, 5000);
     </script>
     </div>
 @stop
