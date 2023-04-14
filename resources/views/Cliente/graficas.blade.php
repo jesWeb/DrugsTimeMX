@@ -93,48 +93,52 @@
             });
         }
 
-        var fechas2 = [];
-        var datos2 = [];
-        $(document).ready(function() {
-            $.ajax({
-                url: '{{ route('graficaTratamiento') }}',
-                method: 'GET',
-                data: {
-                    id: 1
-                }
-            }).done(function(res) {
-                console.log(res);
-                var arreglo = JSON.parse(res);
-                for (let index = 0; index < arreglo.length; index++) {
-                    fechas2.push(arreglo[index].nombre);
-                    datos2.push(arreglo[index].cantidad);
-                }
-                console.log(fechas2);
-                console.log(datos2);
-                generarGrafica2();
-            })
-        });
+        function tiempoReal() {
+            var fechas2 = [];
+            var datos2 = [];
+            $(document).ready(function() {
+                $.ajax({
+                    url: '{{ route('graficaTratamiento') }}',
+                    method: 'GET',
+                    data: {
+                        id: 1
+                    }
+                }).done(function(res) {
+                    console.log(res);
+                    var arreglo = JSON.parse(res);
+                    for (let index = 0; index < arreglo.length; index++) {
+                        fechas2.push(arreglo[index].nombre);
+                        datos2.push(arreglo[index].dosis);
+                    }
+                    console.log(fechas2);
+                    console.log(datos2);
+                    generarGrafica2();
+                })
+            });
 
-        function generarGrafica2() {
-            const ctx = document.getElementById('Tratamientos');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: fechas2,
-                    datasets: [{
-                        label: 'Tratamientos',
-                        data: datos2,
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
+            function generarGrafica2() {
+                const ctx = document.getElementById('Tratamientos');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: fechas2,
+                        datasets: [{
+                            label: 'Tratamientos',
+                            data: datos2,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
                         }
                     }
-                }
-            });
+                });
+            }
         }
+        setInterval(tiempoReal, 60000);
     </script>
+    </div>
 @stop
