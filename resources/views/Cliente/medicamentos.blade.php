@@ -39,7 +39,7 @@
                                     <td>{{ $medicamento->tipo }}</td>
                                     <td>{{ $medicamento->tratamientos_id}}</td>
                                     <td>
-                                    <a class="btn btn-danger" href="{{ route('delateMedicamento', ['idMedica' => $medicamento->idMedica ]) }}"><i  class="bi bi-trash"></i></a>
+                                    {{-- <a class="btn btn-danger" href="{{ route('delateMedicamento', ['idMedica' => $medicamento->idMedica ]) }}"><i  class="bi bi-trash"></i></a> --}}
 
                                     </td>
                                 </tr>

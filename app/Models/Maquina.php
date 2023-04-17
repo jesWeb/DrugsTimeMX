@@ -10,8 +10,9 @@ class Maquina extends Model
     use HasFactory;
     use SoftDeletes;
     protected $fillable =[
-        'nombre',
+        // 'nombre',
         'temperatura',
-        'Humedad'
+        'humedad',
+        'idCliente'
     ];
 }

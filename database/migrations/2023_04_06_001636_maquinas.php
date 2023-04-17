@@ -13,14 +13,14 @@ return new class extends Migration
     {
         //
         Schema::create('maquinas', function (Blueprint $table)  {
-            $table->id();
-            $table->string('nombre');
-            $table->string('temperatura')->nullable();;
-            $table->string('Humedad')->nullable();;
+             $table->id();
+            // $table->string('nombre');
+            $table->string('temperatura');
+            $table->string('humedad');
             $table->timestamps();
              //llave foranea
-             $table->unsignedBigInteger('idCliente');
-             $table->foreign('idCliente')->references('idCliente')->on('clientes');
+            $table->unsignedBigInteger('idCliente');
+            $table->foreign('idCliente')->references('idCliente')->on('clientes');
 
             $table->softDeletes();
         });
